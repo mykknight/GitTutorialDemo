@@ -6,6 +6,17 @@
      var text = document.querySelector('#name').value;
      var email = document.querySelector('#email').value;
 
+     var ui = document.querySelector('#users');
+
+     var li = document.createElement('li');
+
+     li.className = 'item';
+
+     li.appendChild(document.createTextNode(text+" "+email));
+
+     ui.appendChild(li);
+
+
     var myobj = {
         name: text,
         emailid: email
@@ -13,7 +24,7 @@
     };
 
 
-     localStorage.setItem(myobj.name,JSON.stringify(myobj));
+     localStorage.setItem(myobj.emailid,JSON.stringify(myobj));
 
       ///////
 
